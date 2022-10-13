@@ -10,9 +10,17 @@ public class UserName {
     String firstName = s.nextLine();
     System.out.print("Enter your last name: ");
     String lastName = s.nextLine();
+    System.out.print("Enter your favorite number: ");
+    String favNumber = s.nextLine();
+    System.out.print("Are you a teacher or student: ");
+    employment = s.next();
 
     // test output
-    System.out.println("Hello " + initialize(firstName) + "." + initialize(lastName) + ".");
+    if (s.equals(teacher)) {
+    System.out.println(initialize(firstName) + "." + initialize(lastName) + "." + initialize(favNumber) + "@schools.nyc.gov");
+} else {
+  // block of code to be executed if the condition is false
+}
 
     s.close();
   } // end main method
