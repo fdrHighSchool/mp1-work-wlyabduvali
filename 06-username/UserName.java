@@ -13,13 +13,13 @@ public class UserName {
     System.out.print("Enter your favorite number: ");
     String favNumber = s.nextLine();
     System.out.print("Are you a teacher or student: ");
-    employment = s.next();
+    String role = s.next();    
 
     // test output
-    if (s.equals(teacher)) {
-    System.out.println(initialize(firstName) + "." + initialize(lastName) + "." + initialize(favNumber) + "@schools.nyc.gov");
+    if (role.equalsIgnoreCase("teacher")) {
+    System.out.println(initialize(firstName) + (lastName) + initialize(favNumber) + "@schools.nyc.gov");
 } else {
-  // block of code to be executed if the condition is false
+  System.out.println((firstName) + initialize(lastName) + initialize(favNumber) + "@nycstudents.net");
 }
 
     s.close();
