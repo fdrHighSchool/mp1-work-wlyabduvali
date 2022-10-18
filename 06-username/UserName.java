@@ -21,10 +21,22 @@ public class UserName {
 } else {
   System.out.println((firstName) + initialize(lastName) + initialize(favNumber) + "@nycstudents.net");
 }
-
+    generatePassword(8);
+    
     s.close();
   } // end main method
-
+      public static String generatePassword(int length) {
+        String password;
+            
+        int min = 65;
+        int max = 90;
+        int rand = (int)(Math.random()*(max - min + 1) + min);
+        char c = (char)(int)rand;
+                
+        System.out.println(rand + "" + c);
+        
+        return password;
+    }
   /*
    * Name: initialize
    * Purpose: send back the first character (inital) of a name
@@ -34,5 +46,4 @@ public class UserName {
   public static String initialize(String n) {
     return n.substring(0, 1);
   } // end initialize method
-
 } // end class
