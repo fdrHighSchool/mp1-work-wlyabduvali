@@ -26,14 +26,17 @@ public class UserName {
     s.close();
   } // end main method
       public static String generatePassword(int length) {
-        String password;
+        String password = "";
             
         int min = 65;
         int max = 90;
-        int rand = (int)(Math.random()*(max - min + 1) + min);
-        char c = (char)(int)rand;
                 
-        System.out.println(rand + "" + c);
+        for (int i = 0; i < length; i++) {
+            int rand = (int)(Math.random()*(max - min + 1) + min);
+            char c = (char)(int)rand;
+            password += c;
+            System.out.println(rand + "" + c);
+        }
         
         return password;
     }
