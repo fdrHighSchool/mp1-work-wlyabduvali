@@ -21,18 +21,32 @@ public class UserName {
 } else {
   System.out.println((firstName) + initialize(lastName) + initialize(favNumber) + "@nycstudents.net");
 }
-    generatePassword(8);
-    
+    System.out.println("How long do you want your password?");
+    int len = s.nextInt();
+    generatePassword(len);
     s.close();
   } // end main method
       public static String generatePassword(int length) {
         String password = "";
             
-        int min = 65;
-        int max = 90;
+        int min, max;
                 
         for (int i = 0; i < length; i++) {
+            int choice = (int)(Math.random()* 3 + 1);
+            if (choice == 1) {
+                    min = 65;
+                    max = 90;
+                }
+            else if (choice == 2) {
+                    min = 97;
+                    max = 122;
+                }
+            else{
+                    min = 33;
+                    max = 47;
+            }
             int rand = (int)(Math.random()*(max - min + 1) + min);
+            
             char c = (char)(int)rand;
             password += c;
             System.out.println(rand + "" + c);
